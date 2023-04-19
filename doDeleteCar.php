@@ -1,0 +1,18 @@
+<?php 
+
+session_start();
+
+//open DB connection
+include("includes/openDBConn.php");
+
+//sql statement
+$sql = "DELETE FROM Assign06Cars Where CarID = 23";
+
+//execute the query and store the result in $result
+$result = mysqli_query($db, $sql);
+
+include("includes/closeDBConn.php");
+
+//go back to the select page
+header("Location: select.php");
+?>
